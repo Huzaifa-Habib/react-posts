@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
+import light from './light.png'
+import dark from './dark.png'
+
 
 
 const Postcomp = ({profileImg, pageName, time, postText, postImg, emoji, like, numbers, comment, shares}) => (
@@ -51,10 +54,29 @@ const Postcomp = ({profileImg, pageName, time, postText, postImg, emoji, like, n
 
 )
 
-const Maincomp = () => (
-    <div className='main-page'>
-        <div className='main-head'>
+const Maincomp = () => {
+    const [isLit, setLit] = useState(true);
+
+    const changeTheme = () => {
+        setLit(!isLit)
+
+       
+     
+
+
+    }
+
+
+    return(
+
+    <div className={`main-page ${(isLit)? "lit": "dark"}`}>
+        <div className='main-head '>
             <h1>Multiple Posts From Different Sources.</h1>
+           
+        </div>
+
+        <div className='change-theme'>
+            <img src={(isLit)? dark: light} alt="light mode" onClick={changeTheme} title = "Change Theme" />
 
         </div>
 
@@ -129,9 +151,10 @@ const Maincomp = () => (
         
 
     </div>
+    )
 
 
-)
+}
 
 ReactDOM.render(<Maincomp/>,document.querySelector("#root"))
 

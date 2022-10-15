@@ -62,9 +62,7 @@ body{
 
 }
 
-.txt p{
-    /* line-height: 1px; */
-}
+
 
 .postImg img{
     width: 100%;
@@ -117,6 +115,40 @@ body{
     font-size: 15px;
     
 }
+
+.change-theme{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    padding-right: 10px;
+    margin-top: 5px;
+
+
+}
+
+
+
+.change-theme img{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.lit{
+    background-color: rgba(92, 91, 91, 0.233);
+
+
+}
+
+.dark{
+    background-color: rgba(0, 0, 0, 0.911) !important;
+}
+
+ .dark .main-head{
+    background-color: rgba(0, 0, 0, 0.295);
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+} 
 
 @media screen and (max-width:900px) {
     .post{
